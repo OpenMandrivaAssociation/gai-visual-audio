@@ -55,7 +55,6 @@ Terminal=false
 Type=Application
 Categories=X-MandrivaLinux-Multimedia-Sound;AudioVideo;Audio;
 StartupNotify=true
-Encoding=UTF-8
 EOF
 
 
