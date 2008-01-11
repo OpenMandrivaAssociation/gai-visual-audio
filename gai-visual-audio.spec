@@ -38,12 +38,6 @@ install -m644 gai-va-icon.png $RPM_BUILD_ROOT%{_datadir}/pixmaps/
 install -m644 %SOURCE10 -D %{buildroot}/%_miconsdir/%name.png
 install -m644 %SOURCE11 -D %{buildroot}/%_iconsdir/%name.png
 install -m644 %SOURCE12 -D %{buildroot}/%_liconsdir/%name.png
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > %{buildroot}/%{_menudir}/%{name} 
-?package(%name): command="%{_bindir}/gai-va" icon="%name.png" \
-                needs="X11" section="Multimedia/Sound" \
- title="Gai-visual-studio" longtitle="Visualizing the XMMS output" xdg="true"
-EOF
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -73,7 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %{_libdir}/bonobo/servers/GNOME_gai-vaApplet.server
 %_datadir/applications/mandriva*
-%{_menudir}/%name
 %{_datadir}/pixmaps/gai-va/
 %{_datadir}/pixmaps/gai-va-icon.png
 %{_iconsdir}/%name.png
