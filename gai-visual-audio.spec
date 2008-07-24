@@ -1,6 +1,6 @@
 %define name gai-visual-audio
 %define version 0.3
-%define release %mkrel 9
+%define release %mkrel 11
 
 Name: %name
 Summary: GAI applet Visualizing the XMMS output
